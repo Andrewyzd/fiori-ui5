@@ -1,0 +1,71 @@
+<mvc:View controllerName="fui5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m">
+                <Page id='page' title="{i18n>title}">
+                    <content>
+                        <Button id='IDGenButton1' text="Press me please!" press='onClick'>
+                        </Button>
+
+                        <Table id='IDtable1' items="{/SalesOrderSet}" growing="true" growingThreshold="25"> <!-- this refers to oDATA services entityset name -->
+                            <headerToolbar>
+                                <OverflowToolbar id='IDotb1'>
+                                    <Title id='t1' text="{/title}">   
+                                    </Title>
+                                    <SearchField id='sfld1' width='20%' value="{/title}" search='onSearch'>
+                                    </SearchField>
+
+                                    <Button id='btn1' tooltip="Sort" icon='sap-icon://sort' press='onSort'>   
+                                    </Button>
+
+                                    <Button id='btn2' tooltip="Group" icon='sap-icon://group-2' press='onGroup'>   
+                                    </Button>                                    
+
+                                </OverflowToolbar>
+                            </headerToolbar>
+
+                            <columns>
+                                <Column id='column1'>
+                                    <Text id='text1' text='Purchase Order ID'></Text>
+                                </Column>
+
+                                <Column id='column2'>
+                                    <Text id='text2' text='Sales Order ID'></Text>
+                                </Column>
+
+                                <Column id='column3'>
+                                    <Text id='text3' text='Customer Name'></Text>
+                                </Column>
+
+                                <Column id='column4'>
+                                    <Text id='text4' text='Status'></Text>
+                                </Column>
+
+                                <Column id='column5'>
+                                    <Text id='text5' text='Gross Amount'></Text>
+                                </Column>
+
+                                <Column id='column6'>
+                                    <Text id='text6' text='Business Area/OU'></Text>
+                                </Column>
+
+                            </columns>
+
+                            <items>
+                                <ColumnListItem id='clt1' type='Navigation' press='onPressItem'>
+                                    <cells>
+                                        <ObjectNumber id='obj1' number='{Purchase Order ID}'/>
+                                        <ObjectIdentifier id='oi1' text="{Sales Order ID}"/>
+                                        <Text id='ctext1' text="{CustomerName}"/>
+                                        <ObjectStatus id='objs1' text='Completed' icon='sap-icon://status-completed' state="{Status}"/>
+                                        <ObjectNumber id='on1' number="{Gross Amount}" unit="{Currency}"/>
+                                        <Text id='ctext2' text="{Business Area/OU}"/>
+                                    </cells>
+                                </ColumnListItem>                             
+                            </items>
+
+                        </Table>
+
+                    </content>
+                </Page>
+</mvc:View>

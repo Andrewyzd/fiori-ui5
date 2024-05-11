@@ -1,0 +1,12 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+    <ViewSettingsDialog id='SortDialog' confirm='.onSortDialogConfirm'>
+        <sortItems>
+            <ViewSettingsItem id='sortCus' text="Customer Name" key="CustomerName"/>
+            <ViewSettingsItem id='sortPO' text="Purchase Order ID" key="Purchase Order ID"/>
+        </sortItems>
+    </ViewSettingsDialog>
+
+</c:FragmentDefinition>

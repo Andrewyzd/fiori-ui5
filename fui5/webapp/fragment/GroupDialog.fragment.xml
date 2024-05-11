@@ -1,0 +1,13 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+
+    <ViewSettingsDialog id='GroupDialog' confirm='.onGroupDialogConfirm'>
+        <groupItems>
+            <ViewSettingsItem id='sortCus' text="Customer Name" key="CustomerName"/>
+            <ViewSettingsItem id='sortStatus' text="Status" key="Status"/>
+        </groupItems>
+    </ViewSettingsDialog>
+
+</c:FragmentDefinition>
